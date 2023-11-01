@@ -26,8 +26,7 @@ MODULES EXPLANATION:
 
   [1] TensorFlow - libraries for building and training machine learning and deep learning models. 
 
-  [2] Models and layers  module from TensorFlow keras API – 
-These modules allow to create, customize and train various neural network architecture for ML and DL task. 
+  [2] Models and layers  module from TensorFlow keras API – These modules allow to create, customize and train various neural network architecture for ML and DL task. 
 
   [3] Matplotlib is a popular and versatile Python library for creating interactive visualizations in many fields. It provides a wide range of tools for creating high-quality plots, charts, and figures.
 
@@ -72,4 +71,39 @@ These preprocessing steps are often used as the initial part of a neural network
 Data Augmentation:It is often used in combination with other techniques like dropout and regularization to reduce overfitting and improve model performance. It helps the model become more invariant to variations in the input data, leading to better generalization.
 Flipping : flipping the image in both horizontal and vertical directions.
 Rotating: rotating the image by a certain angle and rotated up to 0.2 radian(11.5 degrees) in either direction. 
+
+Step 4: Model Building
+
+In this project we are using Convolutional neural networks(CNN) to build a model. 
+It is a type of artificial neural network designed for processing and analyzing visual data. 
+They are characterized by their ability to automatically learn hierarchical features from raw pixel data, making them highly effective for tasks involving images and grids of data.
+
+Step 5: Training the model
+
+In deep learning, before you can train a model, you need to specify several important settings, such as the optimizer, loss function, and evaluation metrics.
+
+Optimizer  -  Adam optimizer to be used during the training of the neural network, because of its efficiency and ability to handle a wide range of neural network architectures.
+
+Loss function -  used to measure the difference between the predicted outputs and the actual target values during training. SparseCategoricalCrossentropy is a convenient and efficient choice for classification tasks where the target labels are integers.
+
+Evaluation metric(s) that will be calculated and displayed during training. Here we use "accuracy" as the metric. Accuracy is a common metric for classification tasks and measures the proportion of correctly classified examples over the total number of examples.
+
+model.fit() function is used to train the model. It includes various arguments :
+
+1.train_ds - dataset object that contains training data.
+
+2. Epochs - defines how many times the model will go through the entire training dataset. Training for multiple epochs allows the model to iteratively improve its performance. 
+
+3. batch_size - specifies the number of training examples that the model processes in each iteration or mini-batch. 
+
+4. verbose: controls the level of output during training.
+verbose=0 means no output during training.
+verbose=1 provides a progress bar that shows the training progress for each epoch, displaying the training loss and any specified metrics.
+
+5. validation_data: This is typically a dataset object containing your validation data. It is used to evaluate the model's performance during training, but it is not used for training. 
+
+Step 6: Visualization of model output
+
+Plotting the training and validation loss and accuracy of  the model using matplotlib library 
+
 
