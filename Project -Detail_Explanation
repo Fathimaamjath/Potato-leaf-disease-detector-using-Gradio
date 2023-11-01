@@ -69,3 +69,7 @@ Performance Optimization:For attaining this we create a sequential model with tw
 
 These preprocessing steps are often used as the initial part of a neural network model for image classification tasks to prepare the data before it is fed into the neural network layers for training or inference.
 
+Data Augmentation:It is often used in combination with other techniques like dropout and regularization to reduce overfitting and improve model performance. It helps the model become more invariant to variations in the input data, leading to better generalization.
+Flipping : flipping the image in both horizontal and vertical directions.
+Rotating: rotating the image by a certain angle and rotated up to 0.2 radian(11.5 degrees) in either direction. 
+
