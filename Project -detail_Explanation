@@ -1,0 +1,71 @@
+POTATO LEAF DISEASE DETECTOR 
+
+PROBLEM STATEMENT: To develop a model for detecting diseases affecting potato plant and implementing a simple user interface to examine the detector.
+
+PROJECT EXPLANATION: Using this model we are detecting healthy plant leaves and two diseases affected leaves of potato plants.
+
+1.Early blight  disease - Spots begin as small, dark, dry, papery flecks, which grow to become brown-black, circular-to-oval areas. 
+
+2. Late Blight disease- Leaf spots begin as small, pale to dark green,   irregularly shaped spots.
+
+PROJECT IMPLEMENTATION: 
+ 
+  Step 1: Import necessary libraries/Modules
+  
+  Step 2: Loading the dataset 
+  
+  Step 3: Dataset visualization
+  
+  Step 4: Data preprocessing
+  
+  Step 5: Model Training
+  
+  Step 6: Implementing a simple user interface
+
+MODULES EXPLANATION:
+
+  [1] TensorFlow - libraries for building and training machine learning and deep learning models. 
+
+  [2] Models and layers  module from TensorFlow keras API – 
+These modules allow to create, customize and train various neural network architecture for ML and DL task. 
+
+  [3] Matplotlib is a popular and versatile Python library for creating interactive visualizations in many fields. It provides a wide range of tools for creating high-quality plots, charts, and figures.
+
+  [4] Gradio is an open-source Python library used for creating interactive and customizable machine learning interfaces. It is used to build web-based interfaces for machine learning models and  making it easier for users to interact and understand the models.
+
+IMPLEMENTATION [Step by step explanation]
+
+Step 1: Import libraries
+
+Step 2: Import dataset
+
+Dataset used is ‘PlantVillage’ dataset. It is a popular and publicly available dataset in the field of plant pathology. It consists of a large collection of images of plant leaves, each of which is associated with specific plant diseases.
+
+tf.keras.preprocessing.image_dataset_from_directory - reads the images from  specified directory, infers labels from subdirectories, resizes images to a specific size, and creates a dataset suitable for training or validation.
+
+Step 3: To view the images in each dataset we use matplotlib library.
+
+Step 4: Data - preprocessing
+
+Create a function to divide the dataset into training, validation, and test sets for machine learning purposes.
+It takes the input dataset and specified proportion for each.
+The function shuffles the dataset using specified shuffle size.
+Finally the function returns the three partitioned dataset: train_ds, val_ds, test_ds.
+
+Inorder to improve data loading efficiency and preprocessing we use two methods: Cache and prefetch.
+
+cache(): Caching a dataset means storing its elements (or a portion of them) in memory, which can help in speeding up data loading and preprocessing. It avoids reading the same data from storage repeatedly when the dataset is too large.
+
+Prefetch: It allows the dataset to load and prepare batches of data in the background while your model is training on the current batch. 
+
+The `buffer_size` specifies how many batches should be prefetched. 
+
+`tf.data.AUTOTUNE` is a special value that lets TensorFlow automatically choose an appropriate buffer size based on the available system resources, making data loading as efficient as possible.
+
+Performance Optimization:For attaining this we create a sequential model with two preprocessing layers:
+
+1. Resizing: It resizes input images to the specified dimensions.
+2. Rescaling: It scales the pixel values of the images to the range [0, 1].
+
+These preprocessing steps are often used as the initial part of a neural network model for image classification tasks to prepare the data before it is fed into the neural network layers for training or inference.
+
