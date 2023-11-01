@@ -74,9 +74,7 @@ Rotating: rotating the image by a certain angle and rotated up to 0.2 radian(11.
 
 Step 4: Model Building
 
-In this project we are using Convolutional neural networks(CNN) to build a model. 
-It is a type of artificial neural network designed for processing and analyzing visual data. 
-They are characterized by their ability to automatically learn hierarchical features from raw pixel data, making them highly effective for tasks involving images and grids of data.
+In this project we are using Convolutional neural networks(CNN) to build a model. It is a type of artificial neural network designed for processing and analyzing visual data.They are characterized by their ability to automatically learn hierarchical features from raw pixel data, making them highly effective for tasks involving images and grids of data.
 
 Step 5: Training the model
 
@@ -104,6 +102,11 @@ verbose=1 provides a progress bar that shows the training progress for each epoc
 
 Step 6: Visualization of model output
 
-Plotting the training and validation loss and accuracy of  the model using matplotlib library 
+Plotting the training and validation loss and accuracy of  the model using matplotlib library.
+
+Step 7: Creating a simple user interface
+
+Gradio is a Python library that simplifies the process of building and sharing interactive ML and DL models.It is used for creating user-friendly web-based interfaces for these models. Define a function predict that takes text input and returns predictions from your model. Then create a Gradio interface using gr.Interface, specifying the input type and the output type. Finally, you launch the interface, and users can interact with your model via a web browser. 
+
 
 
